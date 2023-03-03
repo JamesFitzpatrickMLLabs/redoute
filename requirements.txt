@@ -1,0 +1,5 @@
+numpy>=1.2.4
+networkx>=3.0
+matplotlib>=3.7.0
+torch>=1.13.1
+xpress>=9.0.3
