@@ -1,4 +1,5 @@
-from optlearn.graph import solution_utils
+from redoute.graph import solution_utils
+from redoute.graph import graph_utils
 
 
 class objectiveComputer():
@@ -19,7 +20,7 @@ class objectiveComputer():
     def _check_contains_lists(self, solution):
 
         contains_lists = any([
-            isinstance(list, item) for item in solution
+            isinstance(item, list) for item in solution
         ])
 
         return contains_lists
@@ -51,7 +52,7 @@ class objectiveComputer():
 def compute_route_weight(graph, route):
 
     route_edges = solution_utils.get_route_edges(route)
-    route_weights = graph_utils.get_edge_weights(graph, route_edges)
+    route_weights = graph_utils.get_edges_weights(graph, route_edges)
     route_weight = sum(route_weights)
 
     return route_weight
