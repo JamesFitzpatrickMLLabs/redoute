@@ -1,6 +1,13 @@
 from redoute.graph import graph_utils
 
 
+def get_node_coordinates(graph):
+
+    node_coordinates = graph.graph.get("coord_dict").values()
+
+    return node_coordinates
+
+
 def get_vehicle_capacity(graph):
 
     vehicle_capacity = graph.graph.get("vehicle_capacity")
