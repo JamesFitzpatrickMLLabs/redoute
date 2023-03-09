@@ -531,3 +531,18 @@ def remove_station_nodes(graph, station_nodes=None):
         output_graph = remove_station_node(output_graph, station_node)
 
     return output_graph
+
+
+def check_graph(graph):
+    """ Check if the given graph is undirected """
+
+    is_graph = type(graph) == nx.Graph
+
+    return is_graph
+
+def check_digraph(graph):
+    """ Check of the graph is a directed graph """
+
+    is_digraph = type(graph) == nx.DiGraph()
+
+    return is_digraph
