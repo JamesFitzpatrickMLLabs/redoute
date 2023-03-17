@@ -540,9 +540,18 @@ def check_graph(graph):
 
     return is_graph
 
+
 def check_digraph(graph):
     """ Check of the graph is a directed graph """
 
     is_digraph = type(graph) == nx.DiGraph()
 
     return is_digraph
+
+
+def check_multi_graph(graph):
+    """ Check if the given graph is a multi graph """
+
+    is_multi_graph = type(graph) == nx.MultiGraph
+
+    return is_multi_graph
